@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAF1B44D88332627C550EB55 /* Pods_MultipleVideoAdsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D827005405041B4BB414976 /* Pods_MultipleVideoAdsDemo.framework */; };
+		C808971328EBD78000F9B657 /* VideoAdsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C808971128EBD78000F9B657 /* VideoAdsCollectionViewCell.swift */; };
+		C808971428EBD78000F9B657 /* VideoAdsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C808971228EBD78000F9B657 /* VideoAdsCollectionViewCell.xib */; };
+		C80AFD7128F40FA100CBC0E9 /* TextCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80AFD6F28F40FA100CBC0E9 /* TextCollectionViewCell.swift */; };
+		C80AFD7228F40FA100CBC0E9 /* TextCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C80AFD7028F40FA100CBC0E9 /* TextCollectionViewCell.xib */; };
 		C857362F28D1D85400675794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C857362E28D1D85400675794 /* AppDelegate.swift */; };
 		C857363128D1D85400675794 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C857363028D1D85400675794 /* SceneDelegate.swift */; };
 		C857363328D1D85400675794 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C857363228D1D85400675794 /* ViewController.swift */; };
@@ -16,6 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D827005405041B4BB414976 /* Pods_MultipleVideoAdsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MultipleVideoAdsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F1C87FBE833131CA7C6FB05 /* Pods-MultipleVideoAdsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultipleVideoAdsDemo.release.xcconfig"; path = "Target Support Files/Pods-MultipleVideoAdsDemo/Pods-MultipleVideoAdsDemo.release.xcconfig"; sourceTree = "<group>"; };
+		C808971128EBD78000F9B657 /* VideoAdsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoAdsCollectionViewCell.swift; sourceTree = "<group>"; };
+		C808971228EBD78000F9B657 /* VideoAdsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoAdsCollectionViewCell.xib; sourceTree = "<group>"; };
+		C80AFD6F28F40FA100CBC0E9 /* TextCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextCollectionViewCell.swift; sourceTree = "<group>"; };
+		C80AFD7028F40FA100CBC0E9 /* TextCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextCollectionViewCell.xib; sourceTree = "<group>"; };
 		C857362B28D1D85400675794 /* MultipleVideoAdsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultipleVideoAdsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C857362E28D1D85400675794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C857363028D1D85400675794 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +35,7 @@
 		C857363728D1D85600675794 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C857363A28D1D85600675794 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C857363C28D1D85600675794 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3BFDE78E22E032B375F9A9C /* Pods-MultipleVideoAdsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MultipleVideoAdsDemo.debug.xcconfig"; path = "Target Support Files/Pods-MultipleVideoAdsDemo/Pods-MultipleVideoAdsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAF1B44D88332627C550EB55 /* Pods_MultipleVideoAdsDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		131EC3C736D8EC0BD68DCD6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3BFDE78E22E032B375F9A9C /* Pods-MultipleVideoAdsDemo.debug.xcconfig */,
+				5F1C87FBE833131CA7C6FB05 /* Pods-MultipleVideoAdsDemo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B522230A6581F89463B88972 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4D827005405041B4BB414976 /* Pods_MultipleVideoAdsDemo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C857362228D1D85400675794 = {
 			isa = PBXGroup;
 			children = (
 				C857362D28D1D85400675794 /* MultipleVideoAdsDemo */,
 				C857362C28D1D85400675794 /* Products */,
+				131EC3C736D8EC0BD68DCD6A /* Pods */,
+				B522230A6581F89463B88972 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,6 +91,10 @@
 				C857362E28D1D85400675794 /* AppDelegate.swift */,
 				C857363028D1D85400675794 /* SceneDelegate.swift */,
 				C857363228D1D85400675794 /* ViewController.swift */,
+				C808971128EBD78000F9B657 /* VideoAdsCollectionViewCell.swift */,
+				C808971228EBD78000F9B657 /* VideoAdsCollectionViewCell.xib */,
+				C80AFD6F28F40FA100CBC0E9 /* TextCollectionViewCell.swift */,
+				C80AFD7028F40FA100CBC0E9 /* TextCollectionViewCell.xib */,
 				C857363428D1D85400675794 /* Main.storyboard */,
 				C857363728D1D85600675794 /* Assets.xcassets */,
 				C857363928D1D85600675794 /* LaunchScreen.storyboard */,
@@ -74,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C857363F28D1D85600675794 /* Build configuration list for PBXNativeTarget "MultipleVideoAdsDemo" */;
 			buildPhases = (
+				4186A786FF6D7D2B5F119286 /* [CP] Check Pods Manifest.lock */,
 				C857362728D1D85400675794 /* Sources */,
 				C857362828D1D85400675794 /* Frameworks */,
 				C857362928D1D85400675794 /* Resources */,
+				C5D14DE2563F3D87C602423D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,7 +163,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C80AFD7228F40FA100CBC0E9 /* TextCollectionViewCell.xib in Resources */,
 				C857363B28D1D85600675794 /* LaunchScreen.storyboard in Resources */,
+				C808971428EBD78000F9B657 /* VideoAdsCollectionViewCell.xib in Resources */,
 				C857363828D1D85600675794 /* Assets.xcassets in Resources */,
 				C857363628D1D85500675794 /* Main.storyboard in Resources */,
 			);
@@ -133,13 +173,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4186A786FF6D7D2B5F119286 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MultipleVideoAdsDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5D14DE2563F3D87C602423D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultipleVideoAdsDemo/Pods-MultipleVideoAdsDemo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MultipleVideoAdsDemo/Pods-MultipleVideoAdsDemo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MultipleVideoAdsDemo/Pods-MultipleVideoAdsDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C857362728D1D85400675794 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C80AFD7128F40FA100CBC0E9 /* TextCollectionViewCell.swift in Sources */,
 				C857363328D1D85400675794 /* ViewController.swift in Sources */,
 				C857362F28D1D85400675794 /* AppDelegate.swift in Sources */,
+				C808971328EBD78000F9B657 /* VideoAdsCollectionViewCell.swift in Sources */,
 				C857363128D1D85400675794 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +368,7 @@
 		};
 		C857364028D1D85600675794 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3BFDE78E22E032B375F9A9C /* Pods-MultipleVideoAdsDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +397,7 @@
 		};
 		C857364128D1D85600675794 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F1C87FBE833131CA7C6FB05 /* Pods-MultipleVideoAdsDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

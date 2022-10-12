@@ -14,9 +14,9 @@ private let testNativeCustomFormatID = "10104090"
 class ViewController: UIViewController {
 
     var myCollectionView: UICollectionView?
-    var adLoadersToAds: [GADAdLoader: GADCustomNativeAd?] = [:]
-    var adLoaders: [GADAdLoader] = []
-    let numberOfCell = 3
+    var customNativeAd: GADCustomNativeAd?
+    var adLoader: GADAdLoader?
+    let numberOfCell = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,31 +34,27 @@ class ViewController: UIViewController {
         enableAutomaticCellSize()
         view.addSubview(myCollectionView ?? UICollectionView())
         self.view = view
-        loadMultipleVideoAds()
+        loadVideoAds()
     }
 
-    func loadMultipleVideoAds() {
-        for _ in stride(from: 0, to: numberOfCell, by: 2) {
-            let adLoader = GADAdLoader(adUnitID: TestAdUnit,
-                                       rootViewController: self,
-                                       adTypes: [.customNative],
-                                       options:nil)
-            adLoader.delegate = self
-            adLoader.load(GAMRequest())
-            adLoaders.append(adLoader)
-        }
-        
+    func loadVideoAds() {
+        adLoader = GADAdLoader(adUnitID: TestAdUnit,
+                                   rootViewController: self,
+                                   adTypes: [.customNative],
+                                   options:nil)
+        adLoader?.delegate = self
+        adLoader?.load(GAMRequest())
     }
     
     public func enableAutomaticCellSize() {
          if let flowLayout = myCollectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
-             flowLayout.estimatedItemSize = getCardViewEstimatedItemSize()
+             flowLayout.itemSize = getCardViewEstimatedItemSize()
          }
      }
 
      private func getCardViewEstimatedItemSize() -> CGSize {
          let screenWidth = UIScreen.main.bounds.width
-         return CGSize(width: screenWidth - 40, height: screenWidth)
+         return CGSize(width: screenWidth, height: screenWidth * 0.8)
 
      }
 }
@@ -69,12 +65,8 @@ extension ViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row % 2 == 0,
+        if indexPath.row == 0,
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VideoAdsCollectionViewCell", for: indexPath) as? VideoAdsCollectionViewCell {
-            cell.backgroundColor = UIColor.blue
-            let adLoaderIndex = indexPath.item/2
-            let adLoader = adLoaders[adLoaderIndex]
-            let customNativeAd = adLoadersToAds[adLoader] as? GADCustomNativeAd
             cell.populate(withCustomNativeAd: customNativeAd)
             return cell
         } else {
@@ -95,9 +87,10 @@ extension ViewController: UICollectionViewDelegate {
 extension ViewController: GADCustomNativeAdLoaderDelegate {
     func adLoader(_ adLoader: GADAdLoader, didReceive customNativeAd: GADCustomNativeAd) {
         print("Received custom native ad: \(customNativeAd)")
-        adLoadersToAds[adLoader] = customNativeAd
+        self.customNativeAd = customNativeAd
         customNativeAd.recordImpression()
         myCollectionView?.reloadData()
+        myCollectionView?.setNeedsDisplay()
     }
 
     func customNativeAdFormatIDs(for adLoader: GADAdLoader) -> [String] {

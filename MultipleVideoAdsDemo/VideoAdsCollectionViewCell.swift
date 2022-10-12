@@ -19,7 +19,6 @@ private let SimpleNativeAdViewCaptionKey = "Caption"
 
 class VideoAdsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var headlineView: UILabel!
-
     @IBOutlet weak var mainPlaceholder: UIView!
     @IBOutlet weak var captionView: UILabel!
 

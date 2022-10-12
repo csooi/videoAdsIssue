@@ -6,5 +6,5 @@ target 'MultipleVideoAdsDemo' do
   use_frameworks!
 
   # Pods for MultipleVideoAdsDemo
-pod 'Google-Mobile-Ads-SDK','8.5.0'
+pod 'Google-Mobile-Ads-SDK'
 end
